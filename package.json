@@ -1,0 +1,56 @@
+{
+  "name": "babel-plugin-twitter",
+  "version": "0.0.0",
+  "description": "transform import from twitter",
+  "license": "MIT",
+  "repository": "akameco/babel-plugin-twitter",
+  "author": "akameco <akameco.t@gmail.com> (akameco.github.io)",
+  "engines": {
+    "node": ">=4"
+  },
+  "main": "lib/index.js",
+  "files": ["lib"],
+  "scripts": {
+    "add-contributor": "all-contributors add",
+    "precommit": "lint-staged",
+    "build": "babel src -d lib --ignore *.test.js,__fixtures__",
+    "prepublish": "npm run build",
+    "example": "yarn run babel-node examples/index.js",
+    "fmt": "prettier --write '**/*.{js,json}'",
+    "flow": "flow",
+    "lint": "eslint src",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage --ci --runInBand",
+    "test:ci": "npm run validate",
+    "validate": "npm run lint && npm run flow && npm run test"
+  },
+  "lint-staged": {
+    "*.js": ["fmt", "validate", "git add"],
+    "*.json": ["fmt", "git add"]
+  },
+  "keywords": ["babel", "babel-plugin", "ast"],
+  "devDependencies": {
+    "all-contributors-cli": "^4.7.0",
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-log": "^2.0.0",
+    "babel-plugin-tester": "^4.0.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^4.10.0",
+    "eslint-config-precure": "^0.11.2",
+    "flow-bin": "^0.59.0",
+    "husky": "^0.14.3",
+    "jest": "^21.2.1",
+    "lint-staged": "^4.3.0",
+    "prettier": "^1.8.1",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "cheerio-httpcli": "^0.7.1",
+    "entities": "^1.1.1",
+    "find-cache-dir": "^1.0.0"
+  }
+}
