@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-twitter",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "transform import from twitter",
   "license": "MIT",
   "repository": "akameco/babel-plugin-twitter",
