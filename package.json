@@ -27,7 +27,7 @@
   },
   "lint-staged": {
     "*.js": ["fmt", "validate", "git add"],
-    "*.json": ["fmt", "git add"]
+    "*.{json,md}": ["fmt", "git add"]
   },
   "keywords": ["babel", "babel-plugin", "ast"],
   "devDependencies": {
