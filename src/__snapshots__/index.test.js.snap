@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`1. twitter 1`] = `
+exports[`default 1. twitter: 1. twitter 1`] = `
 "
 import leftPad from 'twitter:712799807073419264'
 
@@ -10,7 +10,7 @@ const leftPad = (v, n, c = '0') => String(v).length >= n ? '' + v : (String(c).r
 "
 `;
 
-exports[`typo 1`] = `
+exports[`default typo: typo 1`] = `
 "
 import leftPad from 'tweeeeeeettteerrr:712799807073419264'
 
@@ -20,7 +20,7 @@ import leftPad from 'tweeeeeeettteerrr:712799807073419264';
 "
 `;
 
-exports[`use cache 1`] = `
+exports[`default use cache: use cache 1`] = `
 "
 import leftPad from 'twitter:712799807073419264'
 
