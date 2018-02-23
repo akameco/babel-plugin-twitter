@@ -1,5 +1,7 @@
 # babel-plugin-twitter
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/akameco/babel-plugin-twitter.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/akameco/babel-plugin-twitter.svg?branch=master)](https://travis-ci.org/akameco/babel-plugin-twitter)
 [![CircleCI](https://circleci.com/gh/akameco/babel-plugin-twitter.svg?style=svg)](https://circleci.com/gh/akameco/babel-plugin-twitter)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
