@@ -9,16 +9,18 @@
     "node": ">=4"
   },
   "main": "lib/index.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "add-contributor": "all-contributors add",
-    "precommit": "lint-staged",
+    "precommit": "npm run flow && lint-staged",
     "build": "babel src -d lib --ignore *.test.js,__fixtures__",
     "prepublish": "npm run build",
     "example": "yarn run babel-node examples/index.js",
     "fmt": "prettier --write '**/*.{js,json}'",
     "flow": "flow",
-    "lint": "eslint src",
+    "lint": "eslint src --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage --ci --runInBand",
@@ -26,25 +28,31 @@
     "validate": "npm run lint && npm run flow && npm run test"
   },
   "lint-staged": {
-    "*.js": ["fmt", "validate", "git add"],
-    "*.{json,md}": ["fmt", "git add"]
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
-  "keywords": ["babel", "babel-plugin", "ast"],
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "ast"
+  ],
   "devDependencies": {
-    "all-contributors-cli": "^4.10.0",
+    "all-contributors-cli": "^4.11.0",
     "babel-cli": "^6.26.0",
-    "babel-jest": "^21.2.0",
+    "babel-jest": "^22.4.1",
     "babel-log": "^2.0.0",
     "babel-plugin-tester": "^5.0.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
-    "eslint": "^4.13.1",
-    "eslint-config-precure": "^0.11.3",
-    "flow-bin": "^0.61.0",
+    "eslint": "^4.18.1",
+    "eslint-config-precure": "^2.4.0",
+    "flow-bin": "^0.66.0",
     "husky": "^0.14.3",
-    "jest": "^21.2.1",
-    "lint-staged": "^6.0.0",
-    "prettier": "^1.9.2",
+    "jest": "^22.4.2",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.10.2",
     "rimraf": "^2.6.2"
   },
   "dependencies": {

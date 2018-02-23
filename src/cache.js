@@ -2,7 +2,7 @@
 import fs from 'fs'
 import { join } from 'path'
 import findCacheDir from 'find-cache-dir'
-import { name } from '../package.json' // eslint-disable-line
+import { name } from '../package.json' // eslint-disable-line import/extensions
 
 export default class Cache {
   dir: string

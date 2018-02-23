@@ -5,7 +5,7 @@ import pluginTester from 'babel-plugin-tester'
 import plugin from '.'
 
 jest.mock('./tweet')
-import tweet from './tweet' // eslint-disable-line
+import tweet from './tweet' // eslint-disable-line import/first,import/imports-first
 
 const code = `
 export default (v, n, c = '0') => String(v).length >= n ? '' + v : (String(c).repeat(n) + v).slice(-n)
